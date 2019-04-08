@@ -1,4 +1,6 @@
 export class GetToDoService {
+    toDoList: { id: number; title: string; }[];
+    completedList: { id: number; title: string; }[];
     constructor(){
         this.toDoList = [
             {id: 0, title: 'item 1'},
@@ -13,13 +15,13 @@ export class GetToDoService {
         return this.toDoList;
     }
 
-    addToList(item){
+    addToList(item: string){
         let id = this.toDoList.length > 0 ? this.toDoList[this.toDoList.length-1].id +1: 0;
         let newListItem = {id: id, title: item}
         this.toDoList.push(newListItem)
     }
 
-    deleteItem(id){
+    deleteItem(id: number){
         for(let i=0; i<this.toDoList.length; i++){
             if(this.toDoList[i].id === id){
                 this.completedList.push(this.toDoList[i])

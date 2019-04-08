@@ -1,4 +1,3 @@
-
 import {toDoList} from  './todo/todo.component';
 import {CompleteList} from './complete/complete.component';
 import {GetToDoService} from './manage-list.service';
