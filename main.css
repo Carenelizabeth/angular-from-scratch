@@ -1,0 +1,12 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.say-hello{
+    height: 100px;
+    width: 400px;
+    background-color: lightblue;
+}
