@@ -2,17 +2,19 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        app: './src/app.js',
+        app: './src/app.ts',
     },
+    mode: 'development',
+    devtool: 'inline-source-map',
     module: {
-        loaders: [
-          { test: /\.ts(x?)$/, loader: 'ts-loader' },
-          { test: /\.json$/, loader: 'json-loader' }
+        rules: [
+          {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/
+          }
         ]
       },
-    plugins: [
-        new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'})
-        ],
     resolve: {
         extensions: ['.ts', '.js', '.json']
         },

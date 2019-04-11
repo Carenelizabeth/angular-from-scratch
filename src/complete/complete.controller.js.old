@@ -1,4 +1,7 @@
+import {GetToDoService} from '../manage-list.service';
+
 class CompletedListController {
+    // @ts-ignore
     constructor(GetToDoService){
         this.GetToDoService = GetToDoService
         this.list = this.GetToDoService.completedList
